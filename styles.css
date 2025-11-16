@@ -1,0 +1,646 @@
+/* =========================================================
+   HEADER BAR STYLING
+   ========================================================= */
+
+/* Reset all spacing and box model */
+* {
+    margin: 0;                /* remove outer spacing */
+    padding: 0;               /* remove inner spacing */
+    box-sizing: border-box;   /* include padding in element size */
+}
+
+body {
+    font-family: Arial, sans-serif;  /* page font */
+    background-color: #ffffff;       /* white background */
+    color: #000;                     /* black text */
+}
+
+/* Header bar */
+.header {
+    background-color: #000;  /* black background */
+    color: white;            /* white text */
+}
+
+/* Header inner container */
+.header-inside {
+    display: flex;                  /* row layout */
+    justify-content: space-between; /* space between items */
+    align-items: center;            /* center vertically */
+    height: 72px;                   /* header height */
+    padding: 0 240px;               /* left/right spaces */
+}
+
+/* =========================================================
+   LEFT SECTION STYLING: Logo + Navigation Menu
+   ========================================================= */
+
+/* Left section */
+.left-section {
+    display: flex;       /* items in a row */
+    align-items: center; /* center vertically */
+    gap: 40px;           /* space between logo and nav */
+}
+
+/* Logo styling */
+.brand img {
+    height: 50px;       /* logo height */
+    width: 150px;       /* logo width */
+    margin-top: 5px;    /* push margain down */
+    cursor: pointer;    /* pointer on hover */
+}
+
+/* Navigation list */
+.navbar .nav-list {
+    list-style: none; /* no bullets */
+    display: flex;    /* horizontal layout */
+}
+
+/* Navigation links */
+.navbar a {
+    color: white;              /* white text */
+    text-decoration: none;     /* no underline */
+    font-size: 17px;           /* text size */
+    padding: 25px 12px;        /* inner spacing */
+    display: inline-block;     /* allow padding */
+    position: relative;        /* allow underline positioning */
+}
+
+/* Hover background */
+.navbar a:hover {
+    background-color: #2a2a2a; /* grey hover colour */
+}
+
+/* Underline on hover/active */
+.navbar a:hover::after,
+.navbar a.active::after {
+    content: "";               /* create underline */
+    position: absolute;        /* position under text */
+    left: 0;                   /* start left */
+    right: 0;                  /* end right */
+    bottom: 0px;               /* position at bottom */
+    height: 3px;               /* underline thickness */
+    background-color: #e4002b; /* red underline */
+}
+/* =========================================================
+   RIGHT GROUP STYLING: Search + Internet Banking + Login
+   ========================================================= */
+/* Right section */
+.right-section {
+    display: flex;        /* row layout */
+    align-items: center;  /* center vertically */
+    gap: 1px;             /* small gaps */
+}
+
+/* Search icon button */
+.search-icon {
+    font-size: 20px;      /* icon size */
+    background: none;     /* no background */
+    border: none;         /* remove border */
+    color: white;         /* white colour */
+    cursor: pointer;      /* pointer on hover */
+    margin-right: 15px;   /* spacing to next */
+}
+
+/* IB container */
+.ib-group {
+    display: flex;              /* row layout */
+    align-items: center;        /* center vertically */
+    gap: 28px;                  /* space inside */
+    background-color: #495e69;  /* grey background */
+    padding: 14px 20px;         /* inner spacing */
+    border-radius: 4px;         /* rounded corners */
+    border: 1px solid transparent; /* stop movement of button */
+    cursor: pointer;            /* pointer on hover */
+}
+
+/* Hover border */
+.ib-group:hover {
+    border: 1px solid white; /* show border */
+}
+
+/* Arrow icon */
+.arrow {
+    font-size: 14px;      /* size */
+    transform: scaleX(2); /* stretch width */
+}
+
+/* Login button */
+.login-btn {
+    background-color: #b31a12; /* red background */
+    color: white;              /* white text */
+    padding: 14px 24px;        /* inner spacing */
+    border-radius: 4px;        /* rounded corners */
+    text-decoration: none;     /* remove underline */
+    font-weight: bold;         /* bold text */
+    cursor: pointer;           /* pointer on hover */
+    border: 1px solid transparent; /* border size */
+}
+
+/* Login hover */
+.login-btn:hover {
+    background-color: #8a1410; /* darker red */
+    border-color: white;       /* white border */
+}
+
+/* =========================================================
+   BANNER STYLING
+   ========================================================= */
+
+/* Banner section */
+.banner {
+    width: 100%;    /* full width */
+    margin-top: 0;  /* no spacing above */
+}
+
+/* Banner image */
+.banner-img {
+    width: 100%;    /* fill width */
+    height: auto;   /* keep ratio */
+    display: block; /* remove gaps */
+}
+
+/* Banner big text */
+.banner-text {
+    position: absolute;       /* overlay text */
+    top: 20%;                 /* move down */
+    left: 10%;                /* move right */
+    color: white;             /* text colour */
+    font-size: 45px;          /* text size */
+    max-width: 800px;         /* limit width */
+    letter-spacing: -6px;     /* tighter letters */
+    text-shadow: 2px 2px 0 black; /* outline */
+}
+
+/* Banner subtext */
+.banner-subtext {
+    position: absolute;    /* overlay */
+    top: 120%;             /* below heading */
+    color: white;          /* text colour */
+    font-size: 20px;       /* size */
+    max-width: 500px;      /* width limit */
+    letter-spacing: 0.2px; /* normal spacing */
+    left: 0%;              /* align left */
+}
+
+/* ==========================
+   COLOUR SECTION STYLING
+   ========================== */
+
+.info-section {
+    width: 100%;          /* Full width */
+    height: 100px;        /* Adjust height strip */
+    background: #f3f0f0;  /* Light grey background */
+    padding: 40px 240px;  /* Inner spacing (top/bottom, left/right) */
+}
+
+/* ==========================
+   FEATURES 6-BOX STYLING
+   ========================== */
+
+/* Container for 6-box features */
+.features-section {
+    width: 100%;                     /* Full page width */
+    padding: 65px 500px 0px 500px;   /* Outer spacing */
+    background: #ffffff;             /* White background */
+}
+
+/* Grid layout container */
+.features-grid {
+    display: grid;                          /* Use CSS grid layout */
+    grid-template-columns: repeat(3, 1fr);  /* 3 equal-width columns */
+    gap: 25px;                              /* Space between boxes */
+    margin: 0 auto;                         /* Center grid horizontally */
+}
+
+/* Each feature box styling */
+.feature-box {
+    background: #ffffff;  /* White background */
+    padding: 25px;        /* Interior spacing */
+    min-height: 200px;    /* Box height */
+    box-shadow: none;     /* No shadow */
+}
+
+/* Title + icon row */
+.feature-box h3 {
+    font-size: 22px;      /* Title size */
+    margin-bottom: 8px;   /* Gap under title */
+    color: #000;          /* Black text */
+    align-items: center;  /* Center vertically */
+    display: flex;        /* Icon and title in a row */
+    gap: 20px;            /* Space between icon + text */
+}
+
+/* List inside each box */
+.feature-box ul {
+    list-style: none;     /* Remove bullets */
+    padding: 0;           /* Remove default padding */
+    margin: 0;            /* Remove margin */
+    padding-left: 15px;   /* Text alignment with title */
+}
+
+/* The icons next to titles */
+.box-icon {
+    margin-left: -50px;   /* Align icons visually */
+    width: 40px;          /* Icon size */
+    height: auto;         /* Keep aspect ratio */
+}
+
+/* Space between list items */
+.feature-box li {
+    margin-bottom: 10px;  /* Gap between items */
+}
+
+/* Link style (default) */
+a {
+    text-decoration: none; /* Remove underline */
+    color: black;          /* Black text */
+}
+
+/* Underline links when hovering */
+.feature-box a:hover {
+    text-decoration: underline; /* Add underline on hover*/
+}
+
+/* ==========================
+   2-BOX SECTION STYLING
+   ========================== */
+
+.two-box-section {
+    display: grid;                  /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 4px;                       /* Space between columns */
+    padding: 60px 240px;            /* Outer spacing */
+}
+
+/* ==========================
+   LEFT INFO BOX STYLING
+   ========================== */
+
+.info-box {
+    background: #f3f0f0;  /* Light grey background */
+    padding: 30px;        /* Inside spacing */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px;   /* Rounded corners */
+}
+
+.info-box h2 {
+    font-size: 32px;      /* Large title */
+    margin-bottom: 20px;  /* Gap under heading */
+}
+
+.info-box h3 {
+    font-size: 22px;      /* Subheading */
+    margin: 25px 0 10px;  /* Spacing bottom/top */
+}
+
+.info-box p {
+    font-size: 16px;      /* Paragraph size */
+    margin-bottom: 10px;  /* Gap under text */
+}
+
+/* Tick list styling */
+.tick-list {
+    list-style: none;     /* Remove bullet icons */
+    margin: 15px 0;       /* Spacing around list */
+}
+
+.tick-list li {
+    font-size: 16px;      /* List text size */
+    margin-bottom: 10px;  /* Gap between lines */
+}
+
+/* Buttons in left box */
+.info-buttons {
+    margin-top: 25px;     /* Gap above buttons */
+    display: flex;        /* Place buttons in row */
+    gap: 20px;            /* Space between buttons */
+}
+
+/* Green main button */
+.btn-green {
+    background: #008e3b;  /* Green colour */
+    color: white;         /* White text */
+    padding: 14px 26px;   /* Button size */
+    border: none;         /* Remove border */
+    border-radius: 4px;   /* Rounded corners */
+    cursor: pointer;      /* Pointer on hover */
+}
+
+/* Text-style link button */
+.btn-link {
+    align-self: center;   /* Center in row */
+    color: #b31a12;       /* Red text */
+    text-decoration: none;/* No underline */
+    font-weight: bold;    /* Bold text */
+}
+
+/* ==========================
+   RIGHT PROMO BOX STYLING
+   ========================== */
+
+.promo-box {
+    display: flex;             /* Image + text side by side */
+    gap: 25px;                 /* Space between items */
+    align-items: center;       /* Center vertically */
+    background: #f3f0f0;       /* Light grey background */
+    border: 1px solid #ddd;    /* Border */
+    border-radius: 8px;        /* Rounded edges */
+}
+
+/* Phone/app image */
+.promo-image {
+    width: 250px;       /* Width of image */
+    height: 350px;      /* Height of image */
+    padding: 20px;      /* Space around image */
+}
+
+/* Promo heading */
+.promo-text h2 {
+    font-size: 32px;     /* Heading size */
+    margin-bottom: 50px; /* Spacing below heading */
+}
+
+/* Promo paragraph text */
+.promo-text p {
+    font-size: 17px;     /* Text size */
+    margin-bottom: 50px; /* Gap under text */
+}
+
+/* Move text upward in box */
+.promo-text {
+    margin-top: -105px;  /* Move upward */
+}
+
+/* Promo buttons row */
+.promo-buttons {
+    display: flex;       /* Buttons in row */
+    gap: 15px;           /* Space between buttons */
+}
+
+/* Red solid button */
+.btn-red {
+    background: #b31a12;       /* Red fill */
+    color: white;              /* White text */
+    padding: 14px 24px;        /* Size */
+    border-radius: 4px;        /* Rounded corners */
+    border: 1px solid transparent; /* No border */
+    cursor: pointer;           /* Pointer on hover*/
+}
+
+/* White outline button */
+.btn-outline {
+    background: white;         /* White background */
+    color: #b31a12;            /* Red text */
+    padding: 14px 24px;        /* Size */
+    border: 2px solid #b31a12; /* Red border */
+    border-radius: 4px;        /* Rounded */
+    cursor: pointer;           /* Pointer on hover */
+}
+
+/* Hover behaviour for buttons */
+.btn-green:hover,
+.btn-red:hover,
+.btn-outline:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Shadow on hover */
+    transform: translateY(-2px);             /* Lift outline */
+    text-decoration: underline;              /* Underline text */
+}
+
+/* ==========================
+   FOOTER STYLING
+   ========================== */
+
+.footer {
+    background: #000;      /* Black footer background */
+    color: white;          /* White text */
+    padding: 60px 200px;   /* Space inside the footer */
+}
+
+/* 3-column footer layout */
+.footer-container {
+    display: flex;                /* Place columns side-by-side */
+    justify-content: space-between; /* Spread columns apart */
+    gap: 60px;                    /* Space between columns */
+}
+
+/* Footer headings */
+.footer-column h3 {
+    font-size: 22px;      /* Heading text size */
+    margin-bottom: 20px;  /* Space below heading */
+    color: white;         /* White text */
+}
+
+/* Links inside footer */
+.footer-column a {
+    color: #c5e7ff;       /* Light blue link colour */
+    display: block;       /* Each link on its own line */
+    margin-bottom: 12px;  /* Space between links */
+    text-decoration: none;/* No underline */
+    font-size: 16px;      /* Text size */
+}
+
+/* Hover effect for footer links */
+.footer-column a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Icon spacing inside social links */
+.footer-column .icon {
+    margin-right: 6px;    /* Space between icon and text */
+}
+
+/* ================================
+   DROPDOWN MENU STYLING
+   ================================ */
+
+/* Container for each top nav dropdown */
+.menu-item {
+    position: relative; /* Dropdown appears under each item */
+}
+
+/* Dropdown box hidden by default */
+.dropdown {
+    display: none;               /* Hidden until JS opens it */
+    position: absolute;          /* Position below menu link */
+    top: 100%;                   /* Align to top box*/
+    left: 0;                     /* Align left */
+    min-width: 180px;            /* Width of dropdown box */
+    background-color: #060606;   /* Dark grey background */
+    border-radius: 4px;          /* Rounded corners */
+    padding: 0;                  /* No padding */
+    list-style: none;            /* No bullets */
+    z-index: 1000;               /* Sit above other elements */
+}
+
+/* Each dropdown option */
+.dropdown li {
+    width: 100%;                 /* Full width of dropdown */
+}
+
+/* Dropdown links */
+.dropdown li a {
+    display: block;              /* Fill row */
+    padding: 12px 15px;          /* Space inside */
+    color: white;                /* White text */
+    text-decoration: none;       /* No underline */
+    font-size: 15px;             /* Text size */
+}
+
+/* Hover effect inside dropdown */
+.dropdown li a:hover {
+    background-color: #3b4c55;   /* Darker grey on hover */
+}
+
+/* ================================
+   INTERNET BANKING DROPDOWN STYLING
+   ================================ */
+
+/* Container to keep dropdown aligned */
+.ib-menu {
+    position: relative; /* Dropdown positioning */
+}
+
+/* Internet Banking button */
+.ib-group {
+    display: flex;             /* Text/arrow in row */
+    align-items: center;       /* Center vertically */
+    gap: 10px;                 /* Space between text and arrow */
+    background-color: #495e69; /* Grey box */
+    padding: 14px 20px;        /* Inner space */
+    border-radius: 4px;        /* Rounded corners */
+    cursor: pointer;           /* Pointer on hover */
+    color: white;              /* White text */
+}
+
+/* Dropdown items under Internet Banking */
+.ib-dropdown {
+    display: none;             /* Hidden until clicked */
+    position: absolute;        /* Shows directly under ib box */
+    top: 100%;                 /* Align below */
+    left: 0;                   /* Left aligned */
+    background-color: #495e69; /* Grey box */
+    border-radius: 4px;        /* Rounded edges */
+    list-style: none;          /* No bullets */
+    padding: 0;                /* No padding */
+    min-width: 177px;          /* Width of dropdown */
+    z-index: 1000;             /* Above other elements */
+}
+
+/* Links in IB dropdown */
+.ib-dropdown li a {
+    display: block;            /* Fill available width */
+    padding: 12px 15px;        /* Inner spacing */
+    color: white;              /* White text */
+    text-decoration: none;     /* No underline */
+}
+
+/* Hover state */
+.ib-dropdown li a:hover {
+    background-color: #3b4c55; /* Darker grey */
+}
+
+/* ================================================
+   LOGIN POPUP OVERLAY STYLING
+   ================================================ */
+
+/* Background overlay covering the entire screen */
+.login-overlay {
+    position: fixed;              /* Fixed even when scrolling */
+    top: 0;                       /* Full screen start */
+    left: 0;
+    width: 100%;                  /* Full screen width */
+    height: 100%;                 /* Full screen height */
+    background: rgba(0,0,0,0.6);  /* Transparent black overlay */
+    display: none;                /* Hidden until login clicked */
+    justify-content: center;      /* Center popup horizontally */
+    align-items: center;          /* Center popup vertically */
+    z-index: 2000;                /* Align to top */
+}
+
+/* ================================================
+   LOGIN POPUP BOX STYLING
+   ================================================ */
+
+.login-box {
+    background: white;            /* White popup box */
+    width: 400px;                 /* Box width */
+    padding: 30px;                /* Inner space */
+    border-radius: 8px;           /* Rounded corners */
+    position: relative;           /* Close button */
+    text-align: left;             /* Align all content left */
+    color: black;                 /* Text colour */
+}
+
+/* Move title up */
+.login-box h2 {
+    margin-top: -15px;    /* Move up */
+    margin-bottom: 15px;  /* Spacing below title */
+}
+
+/* ================================================
+   CLOSE BUTTON STYLING
+   ================================================ */
+
+.close-login {
+    position: absolute;    /* Position inside popup */
+    top: 15px;             /* Distance from top */
+    right: 15px;           /* Distance from right */
+    cursor: pointer;       /* Pointer on hover */
+    font-size: 20px;       /* X size */
+}
+
+/* ================================================
+   INPUT STYLING
+   ================================================ */
+
+.login-input {
+    width: 100%;                  /* Full width */
+    padding: 12px;                /* Inner padding */
+    margin: 8px 0 20px 0;         /* Margin above/below */
+    border: 1px solid #bbb;       /* Light border */
+    border-radius: 5px;           /* Rounded corners */
+    background: #eef4ff;          /* Light blue background */
+}
+
+/* ================================================
+   LOGIN BUTTON STYLING
+   ================================================ */
+
+.login-submit {
+    background: #b31a12;  /* Red background */
+    color: white;         /* White text */
+    border: none;         /* No border */
+    padding: 14px;        /* Height */
+    width: 100%;          /* Full width */
+    border-radius: 5px;   /* Rounded corners */
+    cursor: pointer;      /* Pointer on hover */
+    font-size: 18px;      /* Larger font */
+}
+
+/* ================================================
+   FORGOT PASSWORD LINK STYLING
+   ================================================ */
+
+.login-forgot {
+    display: block;       /* Single line */
+    margin-top: 20px;     /* Space above link */
+    color: #b31a12;       /* Red text */
+    text-decoration: none;/* No underline */
+}
+
+/* ==================================
+   SEARCH BAR INSIDE HEADER STYLING
+   ==================================*/
+
+.search-inline {
+    display: none;         /* Hidden unless search icon is clicked */
+}
+
+.search-input-inline {
+    padding: 8px 12px;     /* Inner spacing */
+    font-size: 14px;       /* Text size */
+    border: 1px solid #ccc;/* Border colour */
+    border-radius: 5px;    /* Rounded corners */
+    width: 200px;          /* Width of search bar */
+    background: white;     /* White background */
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- Defines this document as HTML5 -->
+<html lang="en">
+<!-- Sets the page language to English -->
+<head>
+    <!-- Specifies character encoding -->
+    <meta charset="UTF-8">
+    <!-- Ensures responsive scaling on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title that appears on the browser tab -->
+    <title>NRB - National Robot Bank</title>
+    <!-- Links external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- =========================================================
+         HEADER SECTION
+         Contains: Logo, Navigation Menu, Search Bar,
+         Internet Banking dropdown, Login Button
+    ========================================================== -->
+    <header class="header">
+        <!-- Container holding all header items in one row -->
+        <div class="header-inside">
+            <!-- LEFT SIDE: Logo + Navigation Menu -->
+            <div class="left-section">
+                <!-- Logo container -->
+                <div class="brand">
+                    <!-- Bank logo image -->
+                    <img src="images/logo.png" alt="NRB Logo" class="logo">
+                </div>
+                <!-- Navigation bar -->
+                <nav class="navbar">
+                    <!-- List of navigation menu items -->
+                    <ul class="nav-list">
+                        <!-- PERSONAL Menu Item -->
+                        <li class="menu-item">
+                            <!-- Main link -->
+                            <a href="#" class="menu-link active">Personal</a>
+                            <!-- Dropdown list under Personal -->
+                            <ul class="dropdown">
+                                <li><a href="#">Open an account</a></li>
+                                <li><a href="#">Savings</a></li>
+                                <li><a href="#">Home loans</a></li>
+                            </ul>
+                        </li>
+                        <!-- BUSINESS Menu Item -->
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Business</a>
+                            <!-- Dropdown for Business -->
+                            <ul class="dropdown">
+                                <li><a href="#">Business accounts</a></li>
+                                <li><a href="#">Loans</a></li>
+                                <li><a href="#">EFTPOS</a></li>
+                            </ul>
+                        </li>
+                        <!-- CORPORATE Menu Item -->
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Corporate</a>
+                            <!-- Dropdown for Corporate -->
+                            <ul class="dropdown">
+                                <li><a href="#">Corporate banking</a></li>
+                                <li><a href="#">Investments</a></li>
+                                <li><a href="#">Credit services</a></li>
+                            </ul>
+                        </li>
+                        <!-- ABOUT US Menu Item -->
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">About us</a>
+                            <!-- Dropdown for About Us -->
+                            <ul class="dropdown">
+                                <li><a href="#">Our story</a></li>
+                                <li><a href="#">Leadership</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </li>
+                        <!-- HELP & SUPPORT Menu Item -->
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Help and support</a>
+                            <!-- Dropdown for Help and Support -->
+                            <ul class="dropdown">
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Security</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- RIGHT SIDE: Search, IB menu, Login -->
+            <div class="right-section">
+                <!-- Expanding search bar field -->
+                <div class="search-inline" id="searchInline">
+                    <input type="text" class="search-input-inline" placeholder="Search...">
+                </div>
+                <!-- Search icon button -->
+                <button class="search-icon">🔍</button>
+                <!-- Internet Banking dropdown container -->
+                <div class="ib-menu">
+                    <!-- Internet Banking clickable header -->
+                    <div class="ib-group">
+                        Internet Banking <span class="arrow">∨</span>
+                    </div>
+                    <!-- Internet Banking dropdown list -->
+                    <ul class="ib-dropdown">
+                        <li><a href="#">Internet Banking</a></li>
+                        <li><a href="#">NRB Trade</a></li>
+                        <li><a href="#">Robot Connect</a></li>
+                    </ul>
+                </div>
+                <!-- Login button that opens popup -->
+                <a href="#" class="login-btn">Login</a>
+            </div>
+        </div>
+    </header>
+        <!-- =========================================================
+         BANNER SECTION
+         Contains banner image and text 
+    ========================================================== -->
+    <section class="banner">
+        <!-- Banner background image -->
+        <img src="images/banner1.png" class="banner-img" alt="banner">
+        <!-- Banner text container -->
+        <div class="banner-text">
+            <!-- Main heading text -->
+            <h1>SECURE BANKING FOR ROBOTS</h1>
+            <!-- Sub heading text -->
+            <div class="banner-subtext">
+                Banking made easy protecting your credits with our
+                4096-bit quantum-safe encryption, unlocking your
+                business potential and safeguarding your future.
+            </div>
+        </div>
+    </section>
+    <!-- =========================================================
+         BASIC COLOUR SECTION 
+         Used as a design for a colour break
+    ========================================================== -->
+    <section class="info-section"></section>
+    <!-- =========================================================
+         FEATURES SECTION
+         Displays 6 category boxes in a 3-column grid
+    ========================================================== -->
+    <section class="features-section">
+        <!-- Grid container for 6 feature boxes -->
+        <div class="features-grid">
+            <!-- ========== FEATURE BOX 1 ========== -->
+            <div class="feature-box">
+                <!-- Category title with icon -->
+                <h3>
+                    <img src="images/home.png" alt="" class="box-icon">
+                    Home Loans
+                </h3>
+                <!-- Links under this feature -->
+                <ul>
+                    <li><a href="#">Compare loans and rates</a></li>
+                    <li><a href="#">Property Investment</a></li>
+                    <li><a href="#">Repayment Calculator</a></li>
+                </ul>
+            </div>
+            <!-- ========== FEATURE BOX 2 ========== -->
+            <div class="feature-box">
+                <h3>
+                    <img src="images/bank.png" alt="" class="box-icon">
+                    Bank Accounts
+                </h3>
+                <ul>
+                    <li><a href="#">Transaction accounts</a></li>
+                    <li><a href="#">Savings accounts</a></li>
+                    <li><a href="#">Term deposit</a></li>
+                </ul>
+            </div>
+            <!-- ========== FEATURE BOX 3 ========== -->
+            <div class="feature-box">
+                <h3>
+                    <img src="images/card.png" alt="" class="box-icon">
+                    Credit Cards
+                </h3>
+                <ul>
+                    <li><a href="#">Rewards credit cards</a></li>
+                    <li><a href="#">Low rate credit cards</a></li>
+                    <li><a href="#">Low fee credit card</a></li>
+                </ul>
+            </div>
+            <!-- ========== FEATURE BOX 4 ========== -->
+            <div class="feature-box">
+                <h3>
+                    <img src="images/personal.png" alt="" class="box-icon">
+                    Personal Loans
+                </h3>
+                <ul>
+                    <li><a href="#">Debt consolidation</a></li>
+                    <li><a href="#">Car Loans</a></li>
+                    <li><a href="#">Repayment calculator</a></li>
+                </ul>
+            </div>
+            <!-- ========== FEATURE BOX 5 ========== -->
+            <div class="feature-box">
+                <h3>
+                    <img src="images/business.png" alt="" class="box-icon">
+                    Business
+                </h3>
+                <ul>
+                    <li><a href="#">Bank accounts</a></li>
+                    <li><a href="#">Business loans</a></li>
+                    <li><a href="#">EFTPOS</a></li>
+                </ul>
+            </div>
+            <!-- ========== FEATURE BOX 6 ========== -->
+            <div class="feature-box">
+                <h3>
+                    <img src="images/options.png" alt="" class="box-icon">
+                    More Options
+                </h3>
+                <ul>
+                    <li><a href="#">Share trading</a></li>
+                    <li><a href="#">Insurance</a></li>
+                    <li><a href="#">International Travel</a></li>
+                </ul>
+            </div>
+        </div> <!-- End features-grid -->
+    </section>
+    <!-- =========================================================
+         TWO-COLUMN SECTION
+         Left info box
+         Right promo box
+    ========================================================== -->
+    <section class="two-box-section">
+        <!-- LEFT BOX: Information content -->
+        <div class="info-box">
+            <!-- Heading for left box -->
+            <h2>Set up your bank accounts with us</h2>
+            <!-- Description text -->
+            <p>
+                If you’re a robot looking for a new bank account and a savings account,
+                save time by opening both together, open a savings account when you apply
+                for a new NRB classic bank account.
+            </p>
+            <!-- Subheading for features list -->
+            <h3>NRB Classic Banking account</h3>
+            <!--List of benefits -->
+            <ul class="tick-list">
+                <li>✔ No monthly account fee</li>
+                <li>✔ No Robot transaction fee</li>
+                <li>✔ No overdrawn fee</li>
+            </ul>
+            <!-- Note under list -->
+            <p class="small-note">Other fees and charges may apply.</p>
+            <!-- Buttons section -->
+            <div class="info-buttons">
+                <!-- Green button -->
+                <button class="btn-green">Get started</button>
+                <!-- Text link button -->
+                <a href="#" class="btn-link">Find out more →</a>
+            </div>
+        </div>
+        <!-- RIGHT BOX: App promotion box -->
+        <div class="promo-box">
+            <!-- App image -->
+            <img src="images/app.png" alt="App" class="promo-image">
+            <!-- Right box text -->
+            <div class="promo-text">
+                <!-- Heading -->
+                <h2>Voted best banking app for every Robot</h2>
+                <!-- Supporting description -->
+                <p>Smart budgeting and savings tools help you get more from your credits.</p>
+                <!-- Buttons under promo -->
+                <div class="promo-buttons">
+                    <!-- Red button -->
+                    <button class="btn-red">Explore App tools</button>
+                    <!-- Outline button -->
+                    <button class="btn-outline">Get the NRB App</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========================================================
+         FOOTER SECTION
+         Contains quick links, policies, and social media
+    ========================================================== -->
+    <footer class="footer">
+        <!-- Footer content container -->
+        <div class="footer-container">
+            <!-- COLUMN 1: Quick links -->
+            <div class="footer-column">
+                <!-- Column heading -->
+                <h3>Quick links</h3>
+                <!-- Footer links -->
+                <a href="#">Security and fraud</a>
+                <a href="#">Contact us</a>
+                <a href="#">Feedback</a>
+            </div>
+            <!-- COLUMN 2: Policies -->
+            <div class="footer-column">
+                <!-- Column heading -->
+                <h3>Policies and terms</h3>
+                <!-- Footer links -->
+                <a href="#">Privacy</a>
+                <a href="#">Website disclaimer</a>
+                <a href="#">Financial Services Guide</a>
+            </div>
+            <!-- COLUMN 3: Social media -->
+            <div class="footer-column">
+                <!-- Column heading -->
+                <h3>Connect with us</h3>
+                <!-- Social media items with emoji icons -->
+                <a href="#"><span class="icon">🔗</span> LinkedIn</a>
+                <a href="#"><span class="icon">📘</span> Facebook</a>
+                <a href="#"><span class="icon">📸</span> Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <!-- =========================================================
+         LOGIN POPUP OVERLAY
+         Hidden by default, shown when Login button is clicked
+    ========================================================== -->
+    <div class="login-overlay" id="loginOverlay">
+        <!-- White popup box -->
+        <div class="login-box">
+            <!-- Close button -->
+            <span class="close-login" id="closeLogin">✖</span>
+            <!-- Popup title -->
+            <h2>NRB Internet Banking</h2>
+            <!-- NRB ID label-->
+            <label for="nabid">NRB ID</label>
+            <!-- Text input for ID -->
+            <input type="text" id="nabid" class="login-input" placeholder="Enter your NRB ID">
+            <!-- Password label-->
+            <label for="password">Password</label>
+            <!-- Password input -->
+            <input type="password" id="password" class="login-input" placeholder="Enter your password">
+            <!-- Row for checkbox option -->
+            <div class="remember-row">
+                <!-- Checkbox toggle -->
+                <input type="checkbox" id="remember">
+                <!-- Checkbox label -->
+                <label for="remember">Remember my NRB ID</label>
+            </div>
+            <!-- Submit button for login -->
+            <button class="login-submit">Login</button>
+            <!-- Password recovery link -->
+            <a href="#" class="login-forgot">Forgot your NRB ID or password?</a>
+        </div>
+    </div>
+    <!-- =========================================================
+         SCRIPT LINK
+         Connects HTML to JavaScript file
+    ========================================================== -->
+    <script src="script.js"></script>
+</body>
+</html>
